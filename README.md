@@ -1,1 +1,2 @@
-# obstacle_avoidance_dmp_pi2
+# Obstacle Avoidance using Dynamic Movement Primitives and Reinforcement Learning
+coming soon...
