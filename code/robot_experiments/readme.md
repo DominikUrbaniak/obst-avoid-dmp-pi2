@@ -5,7 +5,7 @@ Implementation of the pick-and-drop experiment with a UR5e manipulator, Robotiq 
 (to be included into the workspace along the packages from this repository)
 - ROS2 UR description package (ur_description), humble branch (-b humble): https://github.com/UniversalRobots/Universal_Robots_ROS2_Description
 - IOC-UPC inverse kinematics library for UR robots (kinenik): https://gitioc.upc.edu/robots/kinenik
-- Gazebo ROS Link Attacher for simulating stable grasp: https://github.com/pal-robotics/gazebo_ros_link_attacher
+- Gazebo ROS Link Attacher for simulating stable grasp (gazebo_ros_link_attacher): https://github.com/davidorchansky/gazebo_ros_link_attacher/tree/humble-devel
 
 ## Packages in this repository
 - low_level_control: Setup of the gazebo environment with robot, gripper and objects, and FollowJointTrajectory , using modified launch file from https://github.com/UniversalRobots/Universal_Robots_ROS2_Gazebo_Simulation
