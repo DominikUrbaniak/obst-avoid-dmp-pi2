@@ -1,0 +1,9 @@
+float32 goal_x
+float32 goal_y
+float32 goal_z
+int32 sol_id
+int32 mode
+float32[] obj_dims
+string attached_obj_name
+---
+bool success

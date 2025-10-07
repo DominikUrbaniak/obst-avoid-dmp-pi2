@@ -1,0 +1,17 @@
+geometry_msgs/Pose pose_0
+geometry_msgs/Pose pose_goal
+int32 n_solutions
+string dir_path
+float32[] obj_dims
+float64 time_stamp
+---
+float32[] ins1
+float32[] ins2
+float32[] ins3
+float32[] angles
+geometry_msgs/Pose[] poses
+geometry_msgs/Pose[] obstacle_poses
+geometry_msgs/Vector3[] obstacle_sizes
+bool success
+float64 time_stamp_start
+float64 time_stamp_end
