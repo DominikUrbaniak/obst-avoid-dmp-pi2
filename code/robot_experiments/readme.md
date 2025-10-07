@@ -8,7 +8,7 @@ Implementation of the pick-and-drop experiment with a UR5e manipulator, Robotiq 
 - Gazebo ROS Link Attacher for simulating stable grasp (gazebo_ros_link_attacher), humble-devel branch (-b humble-devel): https://github.com/davidorchansky/gazebo_ros_link_attacher
 
 ## Packages in this repository
-- low_level_control: Setup of the gazebo environment with robot, gripper and objects, and FollowJointTrajectory , using modified launch file from https://github.com/UniversalRobots/Universal_Robots_ROS2_Gazebo_Simulation
+- low_level_control: Setup of the gazebo environment with robot, gripper and objects, and JointTrajectory and Gripper controllers, using modified launch file from https://github.com/UniversalRobots/Universal_Robots_ROS2_Gazebo_Simulation
 - ur5e_moveit_commander: Alternative low-level control via MoveIt
 - high_level_control: Provides services to start the experiment, generates the DMP trajectories from the neural network models
 - image_processing: Subscribes and processes point cloud
