@@ -13,9 +13,9 @@ Implementation of the pick-and-drop experiment with a UR5e manipulator, Robotiq 
 - Open3D for processing point clouds
 
 ## Packages in this repository
-- low_level_control: Setup of the gazebo environment with robot, gripper and objects, and JointTrajectory and Gripper controllers, using modified launch file from https://github.com/UniversalRobots/Universal_Robots_ROS2_Gazebo_Simulation
+- low_level_control: Setup of the gazebo environment with robot, gripper and objects, and JointTrajectory controller, using modified launch file from https://github.com/UniversalRobots/Universal_Robots_ROS2_Gazebo_Simulation
 - ur5e_moveit_commander: Alternative low-level control via MoveIt
-- high_level_control: Provides services to start the experiment, generates the DMP trajectories from the neural network models
+- high_level_control: Provides services to start the experiment, generates the DMP trajectories from the neural network models, and provides gripper controller
 - image_processing: Subscribes and processes point cloud
 - custom_interfaces: Includes the custom messages and services
 - robotiq_2f_model: Model from https://github.com/beta-robots/robotiq/tree/master/robotiq_2f_model wrapped in ROS2 package
