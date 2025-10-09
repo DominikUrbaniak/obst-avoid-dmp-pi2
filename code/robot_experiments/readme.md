@@ -24,10 +24,10 @@ Implementation of the pick-and-drop experiment with a UR5e manipulator, Robotiq 
 - (docs: target folder for logging experiments)
 
 ## Run experiment
-Terminal 1
+# Terminal 1
 - ros2 launch low_level_control main_avoid_wall_3p.launch.py
 
-Terminal 2
+# Terminal 2
 
 Option 1:
 - copy dmp_ur/docs/bash/run_pickndrop.sh and experiment_list.json in workspace directory
