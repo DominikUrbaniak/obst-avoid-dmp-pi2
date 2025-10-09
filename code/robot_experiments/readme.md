@@ -1,18 +1,18 @@
-## Pick-and-Drop experiment
+# Pick-and-Drop experiment
 Implementation of the pick-and-drop experiment with a UR5e manipulator, Robotiq 2F-85 gripper, using Ubuntu 22.04, ROS 2 Humble and Gazebo 11.
 
-## External ROS 2 Packages
+# External ROS 2 Packages
 (to be included into the workspace along the packages from this repository)
 - ROS2 UR description package (ur_description), humble branch (-b humble): https://github.com/UniversalRobots/Universal_Robots_ROS2_Description
 - IOC-UPC inverse kinematics library for UR robots (kinenik): https://gitioc.upc.edu/robots/kinenik
 - Gazebo ROS Link Attacher for simulating stable grasp (gazebo_ros_link_attacher), humble-devel branch (-b humble-devel): https://github.com/davidorchansky/gazebo_ros_link_attacher
 
-## Other package requirements
+# Other package requirements
 - DMP library: https://github.com/mginesi/dmp_pp
 - PyTorch for mapping datasets to neural networks
 - Open3D for processing point clouds
 
-## Packages in this repository
+# Packages in this repository
 - low_level_control: Setup of the gazebo environment with robot, gripper and objects, and JointTrajectory controller, using modified launch file from https://github.com/UniversalRobots/Universal_Robots_ROS2_Gazebo_Simulation
 - ur5e_moveit_commander: Alternative low-level control via MoveIt
 - high_level_control: Provides services to start the experiment, generates the DMP trajectories from the neural network models, and provides gripper controller
@@ -23,11 +23,11 @@ Implementation of the pick-and-drop experiment with a UR5e manipulator, Robotiq 
 - ur_forward_kinematics: publishes all robot joints enabling be removal of the robot manipulator from the point cloud
 - (docs: target folder for logging experiments)
 
-## Run experiment
-# Terminal 1
+# Run experiment
+## Terminal 1
 - ros2 launch low_level_control main_avoid_wall_3p.launch.py
 
-# Terminal 2
+## Terminal 2
 
 Option 1:
 - copy dmp_ur/docs/bash/run_pickndrop.sh and experiment_list.json in workspace directory
