@@ -26,12 +26,15 @@ Implementation of the pick-and-drop experiment with a UR5e manipulator, Robotiq 
 ## Run experiment
 Terminal 1
 - ros2 launch low_level_control main_avoid_wall_3p.launch.py
+
 Terminal 2
-(option 1)
+
+Option 1:
 - copy dmp_ur/docs/bash/run_pickndrop.sh and experiment_list.json in workspace directory
 - chmod +x run_pickndrop.sh
 - ./run_pickndrop.sh <experiment_index>
-(option 2)
+
+Option 2
 - ros2 service call /high_level_control/go_to_start std_srvs/srv/Empty
 - ros2 param set /high_level_controller drop_height_offset 0.07
 - ros2 param set /move_group use_sim_time True
