@@ -1,8 +1,0 @@
-float64 x
-float64 y
-float64 z
-float64 qr
-float64 qp
-float64 qy
----
-bool success

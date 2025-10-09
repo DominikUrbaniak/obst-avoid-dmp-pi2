@@ -1,9 +1,0 @@
-geometry_msgs/Pose[] trajectory
-geometry_msgs/Pose[] obstacle_poses
-geometry_msgs/Vector3[] obstacle_sizes
----
-bool success
-float64 planning_time
-trajectory_msgs/JointTrajectory rrt_joint_traj
-string planner
-int32 attempts

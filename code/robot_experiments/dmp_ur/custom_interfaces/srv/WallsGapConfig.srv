@@ -1,6 +1,0 @@
-int32 wall1_height_id
-int32 wall2_height_id
-float32 gap_pos_y
----
-bool success
-string message

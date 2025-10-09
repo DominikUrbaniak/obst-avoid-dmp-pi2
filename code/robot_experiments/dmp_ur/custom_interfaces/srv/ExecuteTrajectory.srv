@@ -1,4 +1,0 @@
-geometry_msgs/Pose[] trajectory
----
-bool success
-std_msgs/Float64MultiArray[] joint_trajectory
