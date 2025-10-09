@@ -1,0 +1,45 @@
+<sdf version="1.6">
+  <model name="mustard_bottle">
+    <static>true</static>
+    <link name="mustard_link">
+      <!-- Visual Properties -->
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://low_level_control/meshes/bleach_cleanser.dae</uri>
+            <scale>1.0 1.0 1.0</scale>
+          </mesh>
+        </geometry>
+          <!-- Material and texture -->
+        <material>
+          <ambient>0.8 0.8 0.8 1.0</ambient>
+          <diffuse>0.8 0.8 0.8 1.0</diffuse>
+          <specular>0.1 0.1 0.1 1.0</specular>
+        </material>
+      </visual>
+
+      <!-- Collision Properties -->
+      <collision name="mustard_collision">
+        <geometry>
+          <mesh>
+            <uri>model://low_level_control/meshes/bleach_cleanser.dae</uri>
+            <scale>1.0 1.0 1.0</scale>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <!-- Inertial Properties -->
+      <inertial>
+        <mass>0.2</mass> <!-- Adjust mass based on material -->
+        <inertia>
+          <ixx>0.01</ixx>
+          <iyy>0.01</iyy>
+          <izz>0.01</izz>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyz>0.0</iyz>
+        </inertia>
+      </inertial>
+    </link>
+  </model>
+</sdf>

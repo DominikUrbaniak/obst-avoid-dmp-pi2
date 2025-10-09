@@ -1,0 +1,9 @@
+float64 first_x
+int32 ny
+int32 nz
+geometry_msgs/Pose start_pose
+float64 cup_x
+float64 cup_y
+---
+bool success
+string message

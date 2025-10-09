@@ -1,0 +1,7 @@
+geometry_msgs/Pose pose_peg
+geometry_msgs/Pose pose_hole
+int32 id_peg
+int32 id_hole
+---
+bool success
+string message
