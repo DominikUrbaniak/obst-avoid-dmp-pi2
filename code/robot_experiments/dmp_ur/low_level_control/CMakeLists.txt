@@ -25,6 +25,7 @@ install(
   DIRECTORY
     config
     launch
+    meshes
     src
     urdf
     worlds
