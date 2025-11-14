@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: low_level_control
+    relative_path: urdf/ur.urdf.xacro
+  srdf:
+    relative_path: config/ur.srdf
+  package_settings:
+    author_name: Dominik Urbaniak
+    author_email: dominik.urbaniak@upc.edu
+    generated_timestamp: 1746348556
