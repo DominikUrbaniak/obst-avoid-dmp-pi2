@@ -26,6 +26,8 @@ from dmp import dmp_cartesian as dmp
 import torch
 import torch.nn as nn
 
+from ament_index_python.packages import get_package_share_directory
+
 def euler_from_quaternion(quaternion):
     """
     Converts quaternion (w in last place) to Euler roll, pitch, yaw
@@ -89,11 +91,15 @@ class HighLevelControlNode(Node):
         self.pose_eef_init.orientation = euler_to_quaternion(self.eef_roll,self.eef_pitch,self.eef_yaw)#,euler_to_quaternion(0,np.pi,0)
         self.drop_height = self.pose_eef_init.position.z + 0.15
 
-        self.git_dir = "src/dmp_ur/"
-        self.exp_dir2 = "src/dmp_ur/docs/experiments/pickndrop_3p/"
-        self.exp_dir1 = "src/dmp_ur/docs/experiments/avoidance_3p/"
-        self.dmp_docs = self.git_dir+'docs/dmp/'
-        self.traj_file_path = self.dmp_docs + 'straight_slow_1D.txt'
+        pkg_path = get_package_share_directory("high_level_control")
+
+        print("high_level_control package path: ",pkg_path)
+        #file_path = os.path.join(pkg_path, "docs", "dmp", "straight_slow_1D.txt")
+        #self.git_dir = get_package_share_directory("dmp_ur")
+        self.exp_dir2 = os.path.join(pkg_path, "docs", "experiments", "pickndrop_3p")
+        self.exp_dir1 = os.path.join(pkg_path, "docs", "experiments", "avoidance_3p")
+        self.dmp_docs = os.path.join(pkg_path, "docs", "dmp")
+        self.traj_file_path = os.path.join(pkg_path, "docs", "dmp", "straight_slow_1D.txt")
         self.get_logger().info("Creating the DMP...")
         self.dmp = self.initialize_dmp(self.traj_file_path,n_dmps=3, n_bfs=10,K=25,rescale='rotodilatation', basis='rbf', alpha_s=4.0, tol=0.001)
 
@@ -102,7 +108,7 @@ class HighLevelControlNode(Node):
 
         max_in = 1.0
         self.ins_offsets = np.array([0.02,-0.02,0.02]) #evaluated in tests that these offsets ensure successful avoidance in 99.5% of cases for this nn model
-        self.nn_model_name = f"model_50_3p_{max_in}.pth"
+        self.nn_model_name = f"/model_50_3p_{max_in}.pth"
         self.get_logger().info(f"DMP type: {type(self.dmp)}, Loading the NN...")
         self.model = torch.jit.load(self.dmp_docs + self.nn_model_name)
         self.model.eval()
