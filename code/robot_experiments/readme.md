@@ -44,6 +44,6 @@ Experiment Setup
 - ros2 service call /low_level_control/reach_point custom_interfaces/srv/ReachPoint "{x: 0.4, y: -0.5, z: 0.18, qr: 0.0, qp: 3.141592653589793, qy: 1.5707963268}"
 
 Obstacle Avoidance (3P-2D model, linear, RRT-Connect)
-- ros2 service call /high_level_control/execute_pick_and_drop custom_interfaces/srv/ExecuteDmpAuto "{obj_dims: [0.07, 0.07, 0.13], sol_id: -1}"
-- ros2 service call /high_level_control/execute_pick_and_drop_linear custom_interfaces/srv/ExecuteDmpAuto "{obj_dims: [0.07, 0.07, 0.13], sol_id: -1}"
+- ros2 service call /high_level_control/execute_pick_and_drop custom_interfaces/srv/ExecuteDmpAuto "{obj_dims: [0.07, 0.07, 0.13], sol_id: 2}"
+- ros2 service call /high_level_control/execute_pick_and_drop_linear custom_interfaces/srv/ExecuteDmpAuto "{obj_dims: [0.07, 0.07, 0.13], sol_id: 2}"
 - ros2 service call /high_level_control/execute_pick_and_drop_rrt custom_interfaces/srv/ExecuteDmpAuto "{obj_dims: [0.07, 0.07, 0.13]}"
